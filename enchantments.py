@@ -26,9 +26,7 @@ class EnchantmentManager:
         初始化 EnchantmentManager 实例，并定义附魔列表。
         """
         self.enchantment_list = [
-            Enchantment("帽子蓝色附魔", 1044, ["散件帽子"]),
             Enchantment("帽子紫色附魔", 2089, ["散件帽子"]),
-            Enchantment("鞋子蓝色附魔", 1044, ["套装鞋子"]),
             Enchantment("鞋子紫色附魔", 2089, ["套装鞋子"]),
             Enchantment("武器五彩石", 2925, ["加速武器", "橙武", "无加速武器"]),
             # Enchantment("暗器附魔", 974, ["加速暗器"])
