@@ -1,33 +1,66 @@
-from flask import Flask, request, jsonify
-from enchantments import enchantment_list
-from equipment import equipment_list
-from utils import HasteCalculator
+import React, { useState } from 'react';
+import HasteForm from './HasteForm';
+import './App.css';
 
+const App = () => {
+  const [result, setResult] = useState(null);
+  const [error, setError] = useState(null);
 
-class HasteApp:
-    def __init__(self):
-        self.app = Flask(__name__)
-        self.haste_calculator = HasteCalculator(equipment_list, enchantment_list)
-        self.setup_routes()
+  const handleFormSubmit = async (formData) => {
+    try {
+      const response = await fetch('http://localhost:5000/calculate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        setResult(data);
+        setError(null);
+      } else {
+        setError(data.error);
+        setResult(null);
+      }
+    } catch (err) {
+      setError('请求失败，请稍后再试。');
+      setResult(null);
+    }
+  };
 
-    def setup_routes(self):
-        @self.app.route('/calculate', methods=['POST'])
-        def calculate():
-            try:
-                data = request.get_json()
-                threshold = data.get('threshold', 46160)
-                rank = data.get('rank', '普通')
-                weapon_type = data.get('weaponType', '无加速武器')
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1 className="App-title">奶妈加速小助手</h1>
+      </header>
+      <div className="App-form">
+        <HasteForm onSubmit={handleFormSubmit} />
+      </div>
+      {error && <div className="App-error">{error}</div>}
+      {result && (
+        <div className="App-result">
+          <h2>结果</h2>
+          <p>总加速等级: {result.total_haste}</p>
+          <p>溢出值: {result.overflow}</p>
+          <p>选择的品阶: {result.rank}</p>
+          <p>选择的武器类型: {result.weapon_type}</p>
+          <h3>选择的装备:</h3>
+          <ul>
+            {result.selected_equipment.map((equip, index) => (
+              <li key={index}>{equip[0]}: {equip[1]}</li>
+            ))}
+          </ul>
+          <h3>选择的附魔:</h3>
+          <ul>
+            {result.selected_enchantments.map((enchant, index) => (
+              <li key={index}>{enchant[0]}: {enchant[1]}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+};
 
-                result = self.haste_calculator.calculate(threshold, rank, weapon_type)
-                return jsonify(result)
-            except Exception as e:
-                return jsonify({'error': str(e)}), 500
-
-    def run(self):
-        self.app.run(debug=True)
-
-
-if __name__ == '__main__':
-    app = HasteApp()
-    app.run()
+export default App;
