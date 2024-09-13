@@ -20,8 +20,8 @@ def calculate_haste(equipment_list, enchantment_list, threshold, rank):
             return 0, -equip.haste_by_rank.get(rank, 0)
 
     equipment_list.sort(key=equipment_priority)
-    # 按照加速值对附魔列表进行排序，优先考虑非帽子和鞋子的附魔
-    enchantment_list.sort(key=lambda x: (x.applicable_equipment[0] not in ["帽子", "鞋子"], -x.haste))
+    # 按照加速值对附魔列表进行排序，优先考虑帽子和鞋子的附魔
+    enchantment_list.sort(key=lambda x: (x.applicable_equipment[0] not in ["散件帽子", "套装鞋子"], -x.haste))
 
     # 使用字典缓存已经计算过的状态
     memo = {}
