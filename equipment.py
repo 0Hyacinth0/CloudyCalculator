@@ -38,7 +38,7 @@ class EquipmentManager:
             Equipment("加速戒指下", {"普通": 4527, "英雄": 5211}),
             Equipment("加速暗器", {"普通": 5432, "英雄": 6253}),
             Equipment("加速武器", {"普通": 10865, "英雄": 12507}, is_weapon=True),
-            Equipment("橙武", {"普通": 8228 "英雄": 8228}, is_weapon=True),
+            Equipment("橙武", {"普通": 8228, "英雄": 8228}, is_weapon=True),
             Equipment("无加速武器", {"普通": 0, "英雄": 0}, is_weapon=True)
         ]
 
