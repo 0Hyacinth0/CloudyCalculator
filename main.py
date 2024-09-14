@@ -63,7 +63,7 @@ if __name__ == "__main__":
     RANK = "普通"  # 可以选择 "普通" 或 "英雄" 品阶
 
     # 手动指定武器类型
-    weapon_type = "橙武"  # 可以选择 "加速武器", "橙武", "无加速武器"
+    weapon_type = "无加速武器"  # 可以选择 "加速武器", "橙武", "无加速武器"
 
     # 创建 HasteOptimizer 实例并执行计算
     optimizer = HasteOptimizer(THRESHOLD, RANK, weapon_type)

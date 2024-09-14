@@ -1,0 +1,17 @@
+[
+    {
+        "name": "帽子紫色附魔",
+        "haste": 2089,
+        "applicable_equipment": ["散件帽子"]
+    },
+    {
+        "name": "鞋子紫色附魔",
+        "haste": 2089,
+        "applicable_equipment": ["套装鞋子"]
+    },
+    {
+        "name": "武器五彩石",
+        "haste": 2925,
+        "applicable_equipment": ["加速武器", "橙武", "无加速武器"]
+    }
+]

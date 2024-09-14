@@ -1,0 +1,72 @@
+[
+    {
+        "name": "散件帽子",
+        "haste_by_rank": {"普通": 8149, "英雄": 9379},
+        "is_weapon": false
+    },
+    {
+        "name": "散件上衣",
+        "haste_by_rank": {"普通": 9054, "英雄": 10422},
+        "is_weapon": false
+    },
+    {
+        "name": "散件腰带",
+        "haste_by_rank": {"普通": 6338, "英雄": 7295},
+        "is_weapon": false
+    },
+    {
+        "name": "套装护手",
+        "haste_by_rank": {"普通": 6338, "英雄": 7295},
+        "is_weapon": false
+    },
+    {
+        "name": "散件下装",
+        "haste_by_rank": {"普通": 9054, "英雄": 10422},
+        "is_weapon": false
+    },
+    {
+        "name": "套装鞋子",
+        "haste_by_rank": {"普通": 6338, "英雄": 7295},
+        "is_weapon": false
+    },
+    {
+        "name": "加速项链",
+        "haste_by_rank": {"普通": 4527, "英雄": 5211},
+        "is_weapon": false
+    },
+    {
+        "name": "加速腰坠",
+        "haste_by_rank": {"普通": 4527, "英雄": 5211},
+        "is_weapon": false
+    },
+    {
+        "name": "加速戒指上",
+        "haste_by_rank": {"普通": 4527, "英雄": 5211},
+        "is_weapon": false
+    },
+    {
+        "name": "加速戒指下",
+        "haste_by_rank": {"普通": 4527, "英雄": 5211},
+        "is_weapon": false
+    },
+    {
+        "name": "加速暗器",
+        "haste_by_rank": {"普通": 5432, "英雄": 6253},
+        "is_weapon": false
+    },
+    {
+        "name": "加速武器",
+        "haste_by_rank": {"普通": 10865, "英雄": 12507},
+        "is_weapon": true
+    },
+    {
+        "name": "橙武",
+        "haste_by_rank": {"普通": 8228, "英雄": 8228},
+        "is_weapon": true
+    },
+    {
+        "name": "无加速武器",
+        "haste_by_rank": {"普通": 0, "英雄": 0},
+        "is_weapon": true
+    }
+]
