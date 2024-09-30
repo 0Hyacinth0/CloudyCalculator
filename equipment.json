@@ -5,6 +5,11 @@
         "is_weapon": false
     },
     {
+        "name": "散件下装",
+        "haste_by_rank": {"普通": 9054, "英雄": 10422},
+        "is_weapon": false
+    },
+    {
         "name": "散件上衣",
         "haste_by_rank": {"普通": 9054, "英雄": 10422},
         "is_weapon": false
@@ -17,11 +22,6 @@
     {
         "name": "套装护手",
         "haste_by_rank": {"普通": 6338, "英雄": 7295},
-        "is_weapon": false
-    },
-    {
-        "name": "散件下装",
-        "haste_by_rank": {"普通": 9054, "英雄": 10422},
         "is_weapon": false
     },
     {
